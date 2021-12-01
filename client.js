@@ -12,6 +12,12 @@ const connect = function () {
     console.log(data)
   })
 
+  conn.on('connect', (data) => {
+    console.log("CONNECTION ESTABLISHED")
+  })
+
+  conn.write("Name: DEV")
+
   return conn;
 };
 
